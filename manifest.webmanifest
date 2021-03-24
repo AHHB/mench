@@ -1,0 +1,20 @@
+{
+  "name": "mench",
+  "short_name": "منچ",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#e0e0d1",
+  "description": "A mench game.",
+  "icons": [
+    {
+      "src": "img/icon@512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icon@256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}
