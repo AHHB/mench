@@ -1,0 +1,535 @@
+@mixin index-xxl {
+    .index-first{
+        margin: 100px auto ;
+        text-align: center;
+
+        img{
+            margin: auto;
+            height: 200px;
+            width: 200px;
+        };
+
+        div{
+            margin-top: 50px;
+        }
+    }
+    
+    .index-second{
+        margin-top: -200px auto;
+        text-align: center;
+        display: none;
+        position: absolute;
+        top: calc(50% - 112px);
+        left: calc(50% - 406px);
+        .btn-lg{
+            position: absolute;
+            bottom: -5px;
+            right: calc(50% - 40px);
+        }
+
+        div{
+            display: inline-block;
+            direction: rtl;
+            margin-bottom: 35px;
+
+           .slc-red{
+                display: inline-block;
+                position: relative;
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                margin-left: 25px;
+                margin-right: 25px;
+                background-color: $red-color;
+           }
+           .slc-green{
+            display: inline-block;
+            position: relative;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-left: 25px;
+            margin-right: 25px;
+            background-color: $green-color;
+           }
+           .slc-yellow{
+            position: relative;
+            display: inline-block;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-left: 25px;
+            margin-right: 25px;
+            background-color: $yellow-color;
+           }
+           .slc-blue{
+            display: inline-block;
+            position: relative;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-left: 25px;
+            margin-right: 25px;
+            background-color: $blue-color;
+           }
+
+           .index-btn{
+               position: absolute;
+               top: calc(50% - 17px);
+               right: calc(50% - 50px);
+               button{  
+                   background-color: transparent;
+                   border: none;
+                   padding: 3px;
+                   font-size: 25px;
+                   transition: all 0.3s linear;
+                   &:hover{
+                       cursor: pointer;
+                       text-shadow: 1px 1px 2px gray , -1px -1px 2px $bg3-color gray , -1px 1px 2px gray , 1px -1px 2px gray;
+                       box-sizing: border-box;
+                       border-radius: 7px;
+                       transform: scale(1.1 , 1.1);
+                   }
+               }
+               .active{
+                border: 2px solid $border-color;
+                background-color: $bg-color;
+                border-radius: 7px;
+                }
+           }
+       
+        }
+       
+
+    }
+
+}
+
+@mixin index-xl {
+    .index-first{
+        margin: 100px auto ;
+        text-align: center;
+
+        img{
+            margin: auto;
+            height: 200px;
+            width: 200px;
+        };
+
+        div{
+            margin-top: 50px;
+        }
+    }
+    
+    .index-second{
+        margin-top: -200px auto;
+        text-align: center;
+        display: none;
+        position: absolute;
+        top: calc(50% - 112px);
+        left: calc(50% - 406px);
+        .btn-lg{
+            position: absolute;
+            bottom: -25px;
+            right: calc(50% - 40px);
+        }
+
+        div{
+            display: inline-block;
+            direction: rtl;
+            margin-bottom: 35px;
+
+           .slc-red{
+                display: inline-block;
+                position: relative;
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                margin-left: 25px;
+                margin-right: 25px;
+                background-color: $red-color;
+           }
+           .slc-green{
+            display: inline-block;
+            position: relative;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-left: 25px;
+            margin-right: 25px;
+            background-color: $green-color;
+           }
+           .slc-yellow{
+            position: relative;
+            display: inline-block;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-left: 25px;
+            margin-right: 25px;
+            background-color: $yellow-color;
+           }
+           .slc-blue{
+            display: inline-block;
+            position: relative;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-left: 25px;
+            margin-right: 25px;
+            background-color: $blue-color;
+           }
+
+           .index-btn{
+               position: absolute;
+               top: calc(50% - 17px);
+               right: calc(50% - 50px);
+               button{  
+                   background-color: transparent;
+                   border: none;
+                   padding: 3px;
+                   font-size: 25px;
+                   transition: all 0.3s linear;
+                   &:hover{
+                       cursor: pointer;
+                       text-shadow: 1px 1px 2px gray , -1px -1px 2px $bg3-color gray , -1px 1px 2px gray , 1px -1px 2px gray;
+                       box-sizing: border-box;
+                       border-radius: 7px;
+                       transform: scale(1.1 , 1.1);
+                   }
+               }
+               .active{
+                border: 2px solid $border-color;
+                background-color: $bg-color;
+                border-radius: 7px;
+                }
+           }
+       
+        }
+       
+
+    }
+}
+
+@mixin index-md {
+    .index-first{
+        margin: 100px auto ;
+        text-align: center;
+
+        img{
+            margin: auto;
+            height: 200px;
+            width: 200px;
+        };
+
+        div{
+            margin-top: 50px;
+        }
+    }
+    
+    .index-second{
+        margin-top: -200px auto;
+        text-align: center;
+        display: none;
+        position: absolute;
+        top: calc(50% - 170px);
+        left: calc(50% - 406px);
+        .btn-lg{
+            position: absolute;
+            bottom: -25px;
+            right: calc(50% - 40px);
+        }
+
+        div{
+            display: inline-block;
+            direction: rtl;
+            margin-bottom: 35px;
+
+           .slc-red{
+                display: inline-block;
+                position: relative;
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                margin-left: 25px;
+                margin-right: 25px;
+                background-color: $red-color;
+           }
+           .slc-green{
+            display: inline-block;
+            position: relative;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-left: 25px;
+            margin-right: 25px;
+            background-color: $green-color;
+           }
+           .slc-yellow{
+            position: relative;
+            display: inline-block;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-left: 25px;
+            margin-right: 25px;
+            background-color: $yellow-color;
+           }
+           .slc-blue{
+            display: inline-block;
+            position: relative;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-left: 25px;
+            margin-right: 25px;
+            background-color: $blue-color;
+           }
+
+           .index-btn{
+               position: absolute;
+               top: calc(50% - 17px);
+               right: calc(50% - 50px);
+               button{  
+                   background-color: transparent;
+                   border: none;
+                   padding: 3px;
+                   font-size: 25px;
+                   transition: all 0.3s linear;
+                   &:hover{
+                       cursor: pointer;
+                       text-shadow: 1px 1px 2px gray , -1px -1px 2px $bg3-color gray , -1px 1px 2px gray , 1px -1px 2px gray;
+                       box-sizing: border-box;
+                       border-radius: 7px;
+                       transform: scale(1.1 , 1.1);
+                   }
+               }
+               .active{
+                border: 2px solid $border-color;
+                background-color: $bg-color;
+                border-radius: 7px;
+                }
+           }
+       
+        }
+       
+
+    }
+}
+
+@mixin index-sm {
+    .index-first{
+        margin: 100px auto ;
+        text-align: center;
+
+        img{
+            margin: auto;
+            height: 200px;
+            width: 200px;
+        };
+
+        div{
+            margin-top: 50px;
+        }
+    }
+    
+    .index-second{
+        margin-top: -200px auto;
+        text-align: center;
+        display: none;
+        position: absolute;
+        top: calc(50% - 170px);
+        width: 100%;
+        padding-bottom: 15px;
+        .btn-lg{
+            position: absolute;
+            bottom: -25px;
+            right: calc(50% - 40px);
+            margin-bottom: 35px;
+        }
+
+        div{
+            display: inline-block;
+            direction: rtl;
+            margin-bottom: 35px;
+
+           .slc-red{
+                display: inline-block;
+                position: relative;
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                margin-left: 25px;
+                margin-right: 25px;
+                background-color: $red-color;
+           }
+           .slc-green{
+            display: inline-block;
+            position: relative;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-left: 25px;
+            margin-right: 25px;
+            background-color: $green-color;
+           }
+           .slc-yellow{
+            position: relative;
+            display: inline-block;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-left: 25px;
+            margin-right: 25px;
+            background-color: $yellow-color;
+           }
+           .slc-blue{
+            display: inline-block;
+            position: relative;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-left: 25px;
+            margin-right: 25px;
+            background-color: $blue-color;
+           }
+
+           .index-btn{
+               position: absolute;
+               top: calc(50% - 17px);
+               right: calc(50% - 50px);
+               button{  
+                   background-color: transparent;
+                   border: none;
+                   padding: 3px;
+                   font-size: 25px;
+                   transition: all 0.3s linear;
+                   &:hover{
+                       cursor: pointer;
+                       text-shadow: 1px 1px 2px gray , -1px -1px 2px $bg3-color gray , -1px 1px 2px gray , 1px -1px 2px gray;
+                       box-sizing: border-box;
+                       border-radius: 7px;
+                       transform: scale(1.1 , 1.1);
+                   }
+               }
+               .active{
+                border: 2px solid $border-color;
+                background-color: $bg-color;
+                border-radius: 7px;
+                }
+           }
+       
+        }
+       
+
+    }
+}
+
+@mixin index-xsm {
+    .index-first{
+        margin: 100px auto ;
+        text-align: center;
+
+        img{
+            margin: auto;
+            height: 200px;
+            width: 200px;
+        };
+
+        div{
+            margin-top: 50px;
+        }
+    }
+    
+    .index-second{
+        margin-top: -200px auto;
+        text-align: center;
+        display: none;
+        position: absolute;
+        top: calc(50% - 250px);
+        width: 100%;   
+        padding-bottom: 15px;
+        overflow: scroll;
+        .btn-lg{
+            position: absolute;
+            bottom: -25px;
+            right: calc(50% - 40px);
+            margin-bottom: 35px;
+        }
+
+        div{
+            display: inline-block;
+            direction: rtl;
+            margin-bottom: 35px;
+
+           .slc-red{
+                display: inline-block;
+                position: relative;
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                margin-left: 25px;
+                margin-right: 25px;
+                background-color: $red-color;
+           }
+           .slc-green{
+            display: inline-block;
+            position: relative;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-left: 25px;
+            margin-right: 25px;
+            background-color: $green-color;
+           }
+           .slc-yellow{
+            position: relative;
+            display: inline-block;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-left: 25px;
+            margin-right: 25px;
+            background-color: $yellow-color;
+           }
+           .slc-blue{
+            display: inline-block;
+            position: relative;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-left: 25px;
+            margin-right: 25px;
+            background-color: $blue-color;
+           }
+
+           .index-btn{
+               position: absolute;
+               top: calc(50% - 17px);
+               right: calc(50% - 50px);
+               button{  
+                   background-color: transparent;
+                   border: none;
+                   padding: 3px;
+                   font-size: 25px;
+                   transition: all 0.3s linear;
+                   &:hover{
+                       cursor: pointer;
+                       text-shadow: 1px 1px 2px gray , -1px -1px 2px $bg3-color gray , -1px 1px 2px gray , 1px -1px 2px gray;
+                       box-sizing: border-box;
+                       border-radius: 7px;
+                       transform: scale(1.1 , 1.1);
+                   }
+               }
+               .active{
+                border: 2px solid $border-color;
+                background-color: $bg-color;
+                border-radius: 7px;
+                }
+           }
+       
+        }
+       
+
+    }
+}

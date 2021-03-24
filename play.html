@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منچ</title>
+    <link rel="shortcut icon" href="img/icon@64.png" title="منچ" />
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="gray"/>
+
+    <!-- style link -->
+    <link rel="stylesheet" href="style/css/main.css">
+    <link rel="stylesheet" href="style/css/animate.min.css">
+    <link rel="stylesheet" href="style/css/fontawesome/all.min.css">
+
+    <style>
+        *{
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body style="overflow: hidden;">
+
+    <!-- menu  -->
+    <button class="btn menu-btn fas fa-ellipsis-v"></button>
+    <section class="menu">
+        <h1>منچ</h1>
+        <p>نسخه 1.0</p>
+        <hr>
+        <section>
+            <img src="img/ahhb_black@80-45.png" alt="ahhb" >
+            <h3 class="animate__animated animate__rubberBand">برنامه نویس: امیرحسین حسنی</h3>
+            <hr>
+            <a href="https://www.github.com/ahhb" title="github"><i class="fab fa-github animate__animated animate__flash animate__delay-2s "></i></a>
+            <a href="http://www.ahhb.ir" title="personal website"><i class="fas fa-globe"></i></a>
+            <a href="https://telegram.me/A_H_H_B_79" title="telegram"><i class="fab fa-telegram"></i></a>
+        </section>
+    </section>
+    <!-- end menu  -->
+
+    <!-- redo -->
+    <button class="btn restart fas fa-redo"></button>
+
+    <div class="restart-div">
+        <p>آیا مایل به شروع یک بازی جدید هستید؟</p>
+        <br>
+        <button class="btn-lg restart-close">خیر</button>
+        <a href="index.html"><button class="btn-lg restart-game">بله</button></a>
+    </div>
+    <!-- end redo -->
+
+    <!-- song -->
+    <button class="song btn fas fa-volume-up"></button>
+    <!-- end song -->
+
+    <!-- game stage  -->
+
+
+    <table class="table" id="table">
+ 
+        <!-- row 1  -->
+        <tr class="animate__animated animate__lightSpeedInRight">
+            <td class="bg"><section class="step-blue" id="blue-1" V-html="hb[1]"></section></td>
+            <td class="bg"><section class="step-blue" id="blue-2" V-html="hb[2]"></section></td>
+            <td></td>
+            <td></td>
+            <td><section class="step s-r-39 s-y-29 s-g-19 s-b-9" V-html="s[39]"></section></td>
+            <td><section class="step s-r-40 s-y-30 s-g-20 s-b-10" V-html="s[40]"><i class="fas fa-flag-checkered"></i></section></td>
+            <td><section class="step s-r-1 s-y-31 s-g-21 s-b-11" V-html="s[1]"><i class="fas fa-arrow-down"></i></section></td>
+            <td></td>
+            <td></td>
+            <td class="bg"><section class="step-red" id="red-1" V-html="hr[1]">}</section></td>
+            <td class="bg"><section class="step-red" id="red-2" V-html="hr[2]"></section></td>
+
+        </tr>
+        <!-- row 2  -->
+        <tr class="animate__animated animate__lightSpeedInLeft">
+            <td class="bg"><section class="step-blue" id="blue-3" V-html="hb[3]"></section></td>
+            <td class="bg"><section class="step-blue" id="blue-4" V-html="hb[4]"></section></td>
+            <td></td>
+            <td></td>
+            <td><section class="step s-r-38 s-y-28 s-g-18 s-b-8" V-html="s[38]"></section></td>
+            <td><section class="step-red s-r-41" V-html="fr[41]"></section></td>
+            <td><section class="step s-r-2 s-y-32 s-g-22 s-b-12" V-html="s[2]"></section></td>
+            <td></td>
+            <td></td>
+
+            <td class="bg"><section class="step-red" id="red-3" V-html="hr[3]"></section></td>
+            <td class="bg"><section class="step-red" id="red-4" V-html="hr[4]"></section></td>
+        </tr>
+        <!-- row 3  -->
+        <tr class="animate__animated animate__lightSpeedInRight">
+            <td><section class="btn-sel cb cb1" v-on:click="cb1"><i>1</i></section></td>
+            <td><section class="btn-sel cb cb2" v-on:click="cb2"><i>2</i></section></td>
+            <td></td>
+            <td></td>
+            <td><section class="step s-r-37 s-y-27 s-g-17 s-b-7" V-html="s[37]"></section></td>
+            <td><section class="step-red s-r-42" V-html="fr[42]"></section></td>
+            <td><section class="step s-r-3 s-y-33 s-g-23 s-b-13" V-html="s[3]"></section></td>
+            <td></td>
+            <td></td>
+            <td><section class="btn-sel cr cr1" v-on:click="cr1"><i>1</i></section></td>
+            <td><section class="btn-sel cr cr2" v-on:click="cr2"><i>2</i></section></td>
+        </tr>
+        <!-- row 4  -->
+        <tr class="animate__animated animate__lightSpeedInLeft">
+            <td><section class="btn-sel cb cb3" v-on:click="cb3"><i>3</i></section></td>
+            <td><section class="btn-sel cb cb4" v-on:click="cb4"><i>4</i></section></td>
+            <td></td>
+            <td></td>
+            <td><section class="step s-r-36 s-y-26 s-g-16 s-b-6" V-html="s[36]"></section></td>
+            <td><section class="step-red s-r-43" V-html="fr[43]"></section></td>
+            <td><section class="step s-r-4 s-y-34 s-g-24 s-b-14" V-html="s[4]"></section></td>
+            <td></td>
+            <td></td>
+            <td><section class="btn-sel cr cr3" v-on:click="cr3"><i>3</i></section></td>
+            <td><section class="btn-sel cr cr4" v-on:click="cr4"><i>4</i></section></td>
+        </tr>
+        <!-- row 5  -->
+        <tr class="animate__animated animate__lightSpeedInRight">
+            <td><section class="step s-r-31 s-y-21 s-g-11 s-b-1" V-html="s[31]"><i class="fas fa-arrow-right"></i></section></td>
+            <td><section class="step s-r-32 s-y-22 s-g-12 s-b-2" V-html="s[32]"></section></td>
+            <td><section class="step s-r-33 s-y-23 s-g-13 s-b-3" V-html="s[33]"></section></td>
+            <td><section class="step s-r-34 s-y-24 s-g-14 s-b-4" V-html="s[34]"></section></td>
+            <td><section class="step s-r-35 s-y-25 s-g-15 s-b-5" V-html="s[35]"></section></td>
+            <td><section class="step-red  s-r-44" V-html="fr[44]"></section></td>
+            <td><section class="step s-r-5 s-y-35 s-g-25 s-b-15" V-html="s[5]"></section></td>
+            <td><section class="step s-r-6 s-y-36 s-g-26 s-b-16" V-html="s[6]"></section></td>
+            <td><section class="step s-r-7 s-y-37 s-g-27 s-b-17" V-html="s[7]"></section></td>
+            <td><section class="step s-r-8 s-y-38 s-g-28 s-b-18" V-html="s[8]"></section></td>
+            <td><section class="step s-r-9 s-y-39 s-g-29 s-b-19" V-html="s[9]"></section></td>
+        </tr>
+        <!-- row 6  -->
+        <tr class="animate__animated animate__lightSpeedInLeft">
+            <td><section class="step s-r-30 s-y-20 s-g-10 s-b-40" V-html="s[30]"><i class="fas fa-flag-checkered"></i></section></td>
+            <td><section class="step-blue s-b-41" V-html="fb[41]"></section></td>
+            <td><section class="step-blue s-b-42" V-html="fb[42]"></section></td>
+            <td><section class="step-blue s-b-43" V-html="fb[43]"></section></td>
+            <td><section class="step-blue s-b-44" V-html="fb[44]"></section></td>
+            <td></td>
+            <td><section class="step-yellow s-y-44" V-html="fy[44]"></section></td>
+            <td><section class="step-yellow s-y-43" V-html="fy[43]"></section></td>
+            <td><section class="step-yellow s-y-42" V-html="fy[42]"></section></td>
+            <td><section class="step-yellow s-y-41" V-html="fy[41]"></section></td>
+            <td><section class="step s-r-10 s-y-40 s-g-30 s-b-20" V-html="s[10]"><i class="fas fa-flag-checkered"></i></section></td>
+        </tr>
+        <!-- row 7  -->
+        <tr class="animate__animated animate__lightSpeedInRight">
+            <td><section class="step s-r-29 s-y-19 s-g-9 s-b-39" V-html="s[29]"></section></td>
+            <td><section class="step s-r-28 s-y-18 s-g-8 s-b-38" V-html="s[28]"></section></td>
+            <td><section class="step s-r-27 s-y-17 s-g-7 s-b-37" V-html="s[27]"></section></td>
+            <td><section class="step s-r-26 s-y-16 s-g-6 s-b-36" V-html="s[26]"></section></td>
+            <td><section class="step s-r-25 s-y-15 s-g-5 s-b-35" V-html="s[25]"></section></td>
+            <td><section class="step-green s-g-44" V-html="fg[44]"></section></td>
+            <td><section class="step s-r-15 s-y-5 s-g-35 s-b-25" V-html="s[15]"></section></td>
+            <td><section class="step s-r-14 s-y-4 s-g-34 s-b-24" V-html="s[14]"></section></td>
+            <td><section class="step s-r-13 s-y-3 s-g-33 s-b-23" V-html="s[13]"></section></td>
+            <td><section class="step s-r-12 s-y-2 s-g-32 s-b-22" V-html="s[12]"></section></td>
+            <td><section class="step s-r-11 s-y-1 s-g-31 s-b-21" V-html="s[11]"><i class="fas fa-arrow-left"></i></section></td>
+        </tr>
+        <!-- row 8  -->
+        <tr class="animate__animated animate__lightSpeedInLeft">
+            <td><section class="btn-sel cg cg1" v-on:click="cg1"><i>1</i></section></td>
+            <td><section class="btn-sel cg cg2" v-on:click="cg2"><i>2</i></section></td>
+            <td></td>
+            <td></td>
+            <td><section class="step s-r-24 s-y-14 s-g-4 s-b-34" V-html="s[24]"></section></td>
+            <td><section class="step-green s-g-43" V-html="fg[43]"></section></td>
+            <td><section class="step s-r-16 s-y-6 s-g-36 s-b-26" V-html="s[16]"></section></td>
+            <td></td>
+            <td></td>
+            <td><section class="btn-sel cy cy1" v-on:click="cy1"><i>1</i></section></td>
+            <td><section class="btn-sel cy cy2" v-on:click="cy2"><i>2</i></section></td>
+        </tr>
+        <!-- row 9  -->
+        <tr class="animate__animated animate__lightSpeedInRight">
+            <td><section class="btn-sel cg cg3" v-on:click="cg3"><i>3</i></section></td>
+            <td><section class="btn-sel cg cg4" v-on:click="cg4"><i>4</i></section></td>
+            <td></td>
+            <td></td>
+            <td><section class="step s-r-23 s-y-13 s-g-3 s-b-33" V-html="s[23]"></section></td>
+            <td><section class="step-green s-g-42" V-html="fg[42]"></section></td>
+            <td><section class="step s-r-17 s-y-7 s-g-37 s-b-27" V-html="s[17]"></section></td>
+            <td></td>
+            <td></td>
+            <td><section class="btn-sel cy cy3" v-on:click="cy3"><i>3</i></section></td>
+            <td><section class="btn-sel cy cy4" v-on:click="cy4"><i>4</i></section></td>
+        </tr>
+        <!-- row 10  -->
+        <tr class="animate__animated animate__lightSpeedInLeft">
+            <td class="bg"><section class="step-green" id="green-1" V-html="hg[1]"></section></td>
+            <td class="bg"><section class="step-green" id="green-2" V-html="hg[2]"></section></td>
+            <td></td>
+            <td></td>
+            <td><section class="step s-r-22 s-y-12 s-g-2 s-b-32" V-html="s[22]"></section></td>
+            <td><section class="step-green s-g-41" V-html="fg[41]"></section></td>
+            <td><section class="step s-r-18 s-y-8 s-g-38 s-b-28" V-html="s[18]"></section></td>
+            <td></td>
+            <td></td>
+            <td class="bg"><section class="step-yellow" id="yellow-1" V-html="hy[1]"></section></td>
+            <td class="bg"><section class="step-yellow" id="yellow-2" V-html="hy[2]"></section></td>
+        </tr>
+        <!-- row 11  -->
+        <tr class="animate__animated animate__lightSpeedInRight">
+            <td class="bg"><section class="step-green" id="green-3" V-html="hg[3]"></section></td>
+            <td class="bg"><section class="step-green" id="green-4" V-html="hg[4]"></section></td>
+            <td></td>
+            <td></td>
+            <td><section class="step s-r-21 s-y-11 s-g-1 s-b-31" V-html="s[21]"><i class="fas fa-arrow-up"></i></section></td>
+            <td><section class="step s-r-20 s-y-10 s-g-40 s-b-30" V-html="s[20]"><i class="fas fa-flag-checkered"></i></section></td>
+            <td><section class="step s-r-19 s-y-9 s-g-39 s-b-29" V-html="s[19]"></section></td>
+            <td></td>
+            <td></td>
+            <td class="bg"><section class="step-yellow" id="yellow-3" V-html="hy[3]"></section></td>
+            <td class="bg"><section class="step-yellow" id="yellow-4" V-html="hy[4]"></section></td>
+        </tr>
+
+    </table>
+
+    <!-- end game stage  -->
+
+    <!-- game menu  -->
+    <div class="roll">
+        <img src="img/t6.png" alt="roll" id="roll" class="animate__animated animate__delay-2s animate__backInLeft">
+        <p class="animate__animated animate__delay-2s animate__backOutLeft">برای به حرکت در آمدن تاس روی آن کلیک کنید</p>
+    </div>
+
+    <div class="n animate__animated animate__backInUp" id="s"></div>
+
+    <div class="game-menu">
+        <div class="toggle-game-menu-btn"> <i class="fas fa-angle-double-up"></i> </div>
+
+        <div class="sc">
+            <div class="sc-div">
+                <section class="sc-red"></section>
+            </div>
+            <div class="cs-div">
+                <section class="sc-yellow"></section>
+            </div>
+            <div class="sc-div">
+                <section class="sc-green"></section>
+            </div>
+            <div class="cs-div">
+                <section class="sc-blue"></section>
+            </div>
+        </div>
+    </div>
+
+    <div class="end-game">
+        <div class="content"></div>
+        <br>
+        <hr>
+        <br>
+        <ol>
+            <li class="winer-1">-</li>
+            <li class="winer-2">-</li>
+            <li class="winer-3">-</li>
+            <li class="winer-4">-</li>
+        </ol>
+        <br>
+        <hr>
+        <br>
+        <p>برای ادامه بازی روی دکمه زیر کلیک کنید</p>
+        <button class="btn-lg btn-endgame">ادامه</button>
+    </div>
+
+    <button id="next" class="btn-lg animate__animated animate__backInUp">بعدی</button>
+
+    <audio id="bgsong" src="song/bgSong.mp3" preload="auto" loop></audio>
+    <!-- end game menu  -->
+    
+    <!-- java script -->
+    <script src="js/vue.js"></script>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

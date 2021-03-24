@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    // overflow: hidden;
+}
+
+@font-face {
+    font-family: Parastoo;
+    src: url('../font/Parastoo/Parastoo.eot');
+    src: url('../font/Parastoo/Parastoo.eot?#iefix') format('embedded-opentype'),
+         url('../font/Parastoo/Parastoo.woff') format('woff'),
+         url('../font/Parastoo/Parastoo.ttf') format('truetype');
+}

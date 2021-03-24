@@ -1,0 +1,319 @@
+.table{
+    position: absolute;
+    transition: all 0.3s ease;
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    background-image: url(../../img/gameBackgrund.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 5px $bg2-color , -3px -3px 5px $bg2-color , -3px 3px 5px $bg2-color , 3px -3px 5px $bg2-color;
+    padding: 5px;
+    text-align: center;
+
+    tr{
+        height: 9.09090%;
+        .bg{
+            background-image: url(../../img/homeBackground.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 5px;
+            padding: 2px;
+        }
+        td{
+            width: 9.09090%;
+            position: relative;
+            .step{
+                background-image: url(../../img/stepBackground.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+            }
+            .step-red{
+                background-color: $red-color;
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+            }
+            .step-blue{
+                background-color: $blue-color;
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+            }
+            .step-yellow{
+                background-color: $yellow-color;
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+            }
+            .step-green{
+                background-color: $green-color;
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+            }
+            i{
+                font-size: 15px;
+                opacity: 0.85;
+                position: absolute;
+                top: calc(50% - 8px);
+                right: calc(50% - 7px);
+                color: $bg3-color;
+            }
+        
+        }
+    }
+}
+
+.roll{
+    display: inline-block;
+    margin: 10px;
+    width: 115px;
+    text-align: center;
+    position: relative;
+    img{
+        width: 110px;
+        height: 110px;
+        display: inline-block;
+        cursor: pointer;
+    }
+    p{
+        font-family: parastoo;
+        font-size: 12px;
+        display: inline-block;
+        border: 2px solid $border-color;
+        border-radius: 10px;
+        padding: 5px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+.n{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid $border-color;
+    box-sizing: border-box;
+}
+
+.game-menu{
+    position: absolute;
+    left: 10px;
+    bottom: -105px;
+    width: 250px;
+    height: 100px;
+    background-image: url(../../img/NoiseLines@2X.png);
+    border-radius: 5px;
+    border:2px solid $border-color;
+    box-shadow: 2px 2px 5px darkgrey , -2px 2px 5px darkgrey , 2px -2px 5px darkgrey , -2px -2px 5px darkgrey;
+    overflow: visible;
+    transition: all 0.5s ease;
+    .toggle-game-menu-btn{
+        position: relative;
+        background-color: $bg2-color;
+        width: 50px;
+        padding: 3px;
+        text-align: center;
+        transition: all 0.5s ease;
+        top: -29px;
+        border-radius: 5px 5px 0 0;
+        border-top: 2px solid $border-color;
+        border-left: 2px solid $border-color;
+        border-right: 2px solid $border-color;
+        box-sizing: border-box;
+        box-shadow: 2px -2px 5px darkgrey , -2px -2px 5px darkgrey;
+        cursor: pointer;
+    }
+
+    .sc{
+        padding: 5px;
+
+        .sc-div{
+            width: 100%;
+            text-align: left;
+        }
+
+        .sc-red{
+            background-color: $red-color;
+            height: 7px;
+            width: 2px;
+            margin-top: 5px;
+            // float: left;
+        }
+        .sc-blue{
+            background-color: $blue-color;
+            height: 7px;
+            width: 2px;
+            margin-top: 5px;
+            float: left;
+        }
+        .sc-green{
+            background-color: $green-color;
+            height: 7px;
+            width: 2px;
+            margin-top: 5px;
+            float: left;
+        }
+        .sc-yellow{
+            background-color: $yellow-color;
+            height: 7px;
+            width: 2px;
+            margin-top: 5px;
+            float: left;
+        }
+    }
+}
+
+.restart{
+    position: absolute;
+    top: 7px;
+    right: 50px;
+    font-size: 20px;
+}
+
+.restart-div{
+    position: absolute;
+    right:10px ;
+    top: 50px;
+    text-align: center;
+    background-color: $bg2-color;
+    border-radius: 10px;
+    border:2px $border-color solid;
+    box-shadow: 2px 2px 5px lightgray , -2px 2px 5px lightgray , 2px -2px 5px lightgray , -2px -2px 5px lightgray;
+    padding: 15px;
+    z-index: 10000;
+    display: none;
+    font-family: parastoo;
+}
+
+
+.blue-m{
+    position: absolute;
+    height: 111%;
+    width: 111%;
+    background-image: url(../../img/blue.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 999;
+}
+.red-m{
+    position: absolute;
+    height: 111%;
+    width: 111%;
+    background-image: url(../../img/red.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 999;
+}
+.green-m{
+    position: absolute;
+    height: 111%;
+    width: 111%;
+    background-image: url(../../img/green.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 999;
+}
+.yellow-m{
+    position: absolute;
+    height: 111%;
+    width: 111%;
+    background-image: url(../../img/yellow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 999;
+}
+.m{
+    // display: none;
+    margin-top: -1px;
+    margin-left: -1px;
+}
+.m-step{
+    width: 110%;
+    height: 110%;
+}
+
+#next{
+    position: absolute;
+    bottom: 5px;
+    right: 35px;
+}
+
+.mum{
+    margin-right: 4px;
+}
+
+.btn-sel{
+    height: 100%;
+    width: 100%;
+    background-color: $bg2-color;
+    border: 2px solid $bg3-color;
+    box-sizing: border-box;
+    border-radius:50%;
+    cursor: pointer;
+    display: none;
+    opacity: 0.6;
+    i{
+        margin-right: 3px;
+        opacity: 0.99;
+        font-weight: bold;
+    }
+ }
+
+ .song{
+     position: absolute;
+     top: 7px;
+     right: 95px;
+     font-size: 20px;
+ }
+
+ .end-game{
+     position: absolute;
+     top: calc(50% - 160);
+     left: calc(50% - 125px);
+     width: 250px;
+     height: 320px;
+     background-image: url(../../img/homeBackground.jpg);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     border-radius: 15px;
+     box-shadow: 1px 1px 5px silver , -1px 1px 5px silver , 1px -1px 5px silver , -1px -1px 5px silver; 
+     color: whitesmoke;
+     text-align: center;
+     padding: 7px;
+     display: none;
+ }
+
+ .winer-1::before{
+         content: '  نفر اول : '; 
+ }
+ .winer-2::before{
+    content: '  نفر دوم : '; 
+}
+.winer-3::before{
+    content: '  نفر سوم : '; 
+}
+.winer-4::before{
+    content: '  نفر چهارم : '; 
+}

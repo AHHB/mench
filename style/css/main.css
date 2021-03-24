@@ -1,0 +1,926 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+@font-face {
+  font-family: Parastoo;
+  src: url("../font/Parastoo/Parastoo.eot");
+  src: url("../font/Parastoo/Parastoo.eot?#iefix") format("embedded-opentype"), url("../font/Parastoo/Parastoo.woff") format("woff"), url("../font/Parastoo/Parastoo.ttf") format("truetype");
+}
+.table {
+  position: absolute;
+  transition: all 0.3s ease;
+  border: 1px solid #70707021;
+  border-radius: 10px;
+  background-image: url(../../img/gameBackgrund.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 5px #E6E6E6, -3px -3px 5px #E6E6E6, -3px 3px 5px #E6E6E6, 3px -3px 5px #E6E6E6;
+  padding: 5px;
+  text-align: center;
+}
+.table tr {
+  height: 9.0909%;
+}
+.table tr .bg {
+  background-image: url(../../img/homeBackground.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  padding: 2px;
+}
+.table tr td {
+  width: 9.0909%;
+  position: relative;
+}
+.table tr td .step {
+  background-image: url(../../img/stepBackground.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.table tr td .step-red {
+  background-color: #FF0000;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.table tr td .step-blue {
+  background-color: #0055FF;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.table tr td .step-yellow {
+  background-color: #FFFF00;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.table tr td .step-green {
+  background-color: #00FF21;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.table tr td i {
+  font-size: 15px;
+  opacity: 0.85;
+  position: absolute;
+  top: calc(50% - 8px);
+  right: calc(50% - 7px);
+  color: #2e2e2e;
+}
+
+.roll {
+  display: inline-block;
+  margin: 10px;
+  width: 115px;
+  text-align: center;
+  position: relative;
+}
+.roll img {
+  width: 110px;
+  height: 110px;
+  display: inline-block;
+  cursor: pointer;
+}
+.roll p {
+  font-family: parastoo;
+  font-size: 12px;
+  display: inline-block;
+  border: 2px solid #70707021;
+  border-radius: 10px;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.n {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #70707021;
+  box-sizing: border-box;
+}
+
+.game-menu {
+  position: absolute;
+  left: 10px;
+  bottom: -105px;
+  width: 250px;
+  height: 100px;
+  background-image: url(../../img/NoiseLines@2X.png);
+  border-radius: 5px;
+  border: 2px solid #70707021;
+  box-shadow: 2px 2px 5px darkgrey, -2px 2px 5px darkgrey, 2px -2px 5px darkgrey, -2px -2px 5px darkgrey;
+  overflow: visible;
+  transition: all 0.5s ease;
+}
+.game-menu .toggle-game-menu-btn {
+  position: relative;
+  background-color: #E6E6E6;
+  width: 50px;
+  padding: 3px;
+  text-align: center;
+  transition: all 0.5s ease;
+  top: -29px;
+  border-radius: 5px 5px 0 0;
+  border-top: 2px solid #70707021;
+  border-left: 2px solid #70707021;
+  border-right: 2px solid #70707021;
+  box-sizing: border-box;
+  box-shadow: 2px -2px 5px darkgrey, -2px -2px 5px darkgrey;
+  cursor: pointer;
+}
+.game-menu .sc {
+  padding: 5px;
+}
+.game-menu .sc .sc-div {
+  width: 100%;
+  text-align: left;
+}
+.game-menu .sc .sc-red {
+  background-color: #FF0000;
+  height: 7px;
+  width: 2px;
+  margin-top: 5px;
+}
+.game-menu .sc .sc-blue {
+  background-color: #0055FF;
+  height: 7px;
+  width: 2px;
+  margin-top: 5px;
+  float: left;
+}
+.game-menu .sc .sc-green {
+  background-color: #00FF21;
+  height: 7px;
+  width: 2px;
+  margin-top: 5px;
+  float: left;
+}
+.game-menu .sc .sc-yellow {
+  background-color: #FFFF00;
+  height: 7px;
+  width: 2px;
+  margin-top: 5px;
+  float: left;
+}
+
+.restart {
+  position: absolute;
+  top: 7px;
+  right: 50px;
+  font-size: 20px;
+}
+
+.restart-div {
+  position: absolute;
+  right: 10px;
+  top: 50px;
+  text-align: center;
+  background-color: #E6E6E6;
+  border-radius: 10px;
+  border: 2px #70707021 solid;
+  box-shadow: 2px 2px 5px lightgray, -2px 2px 5px lightgray, 2px -2px 5px lightgray, -2px -2px 5px lightgray;
+  padding: 15px;
+  z-index: 10000;
+  display: none;
+  font-family: parastoo;
+}
+
+.blue-m {
+  position: absolute;
+  height: 111%;
+  width: 111%;
+  background-image: url(../../img/blue.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+.red-m {
+  position: absolute;
+  height: 111%;
+  width: 111%;
+  background-image: url(../../img/red.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+.green-m {
+  position: absolute;
+  height: 111%;
+  width: 111%;
+  background-image: url(../../img/green.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+.yellow-m {
+  position: absolute;
+  height: 111%;
+  width: 111%;
+  background-image: url(../../img/yellow.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+.m {
+  margin-top: -1px;
+  margin-left: -1px;
+}
+
+.m-step {
+  width: 110%;
+  height: 110%;
+}
+
+#next {
+  position: absolute;
+  bottom: 5px;
+  right: 35px;
+}
+
+.mum {
+  margin-right: 4px;
+}
+
+.btn-sel {
+  height: 100%;
+  width: 100%;
+  background-color: #E6E6E6;
+  border: 2px solid #2e2e2e;
+  box-sizing: border-box;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  opacity: 0.6;
+}
+.btn-sel i {
+  margin-right: 3px;
+  opacity: 0.99;
+  font-weight: bold;
+}
+
+.song {
+  position: absolute;
+  top: 7px;
+  right: 95px;
+  font-size: 20px;
+}
+
+.end-game {
+  position: absolute;
+  top: calc(50% - 160);
+  left: calc(50% - 125px);
+  width: 250px;
+  height: 320px;
+  background-image: url(../../img/homeBackground.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px silver, -1px 1px 5px silver, 1px -1px 5px silver, -1px -1px 5px silver;
+  color: whitesmoke;
+  text-align: center;
+  padding: 7px;
+  display: none;
+}
+
+.winer-1::before {
+  content: "  نفر اول : ";
+}
+
+.winer-2::before {
+  content: "  نفر دوم : ";
+}
+
+.winer-3::before {
+  content: "  نفر سوم : ";
+}
+
+.winer-4::before {
+  content: "  نفر چهارم : ";
+}
+
+body {
+  background-color: #F5F5F5;
+}
+
+/*** buttons ***/
+.btn {
+  background-color: #E6E6E6;
+  border: 0.01rem solid #70707021;
+  padding: 5px 7px 5px 7px;
+  margin: 2px;
+  border-radius: 5px;
+  font-family: parastoo;
+  box-shadow: 2px 2px 3px #70707021, -2px -2px 3px #70707021;
+  transition: all 0.2s linear;
+}
+.btn:hover {
+  cursor: pointer;
+  text-shadow: 1px 1px 2px #70707021;
+  transform: scale(1.05, 1);
+  box-shadow: 2px 2px 5px #70707021, -2px -2px 5px #70707021, -2px 2px 5px #70707021, 2px -2px 5px #70707021;
+}
+
+.btn-lg {
+  background-color: #E6E6E6;
+  border: 0.01rem solid #70707021;
+  padding: 10px 20px 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  font-family: parastoo;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 2px 2px 3px #70707021, -2px -2px 3px #70707021;
+  transition: all 0.2s linear;
+}
+.btn-lg:hover {
+  cursor: pointer;
+  text-shadow: 1px 1px 2px #70707021;
+  transform: scale(1.05, 1);
+  box-shadow: 2px 2px 5px #70707021, -2px -2px 5px #70707021, -2px 2px 5px #70707021, 2px -2px 5px #70707021;
+}
+
+/*** end buttons ***/
+/*** menu ***/
+.menu-btn {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  font-size: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.menu {
+  position: absolute;
+  top: 45px;
+  right: 10px;
+  width: 300px;
+  background-color: #E6E6E6;
+  border: 1px solid #70707021;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #70707021, -2px -2px 5px #70707021, -2px 2px 5px #70707021, 2px -2px 5px #70707021;
+  text-align: right;
+  direction: rtl;
+  padding: 5px 10px;
+  display: none;
+  z-index: 1000;
+}
+.menu h1 {
+  font-family: parastoo;
+  font-size: 30px;
+  display: inline-block;
+}
+.menu p {
+  display: inline-block;
+  color: gray;
+  margin-right: 7px;
+}
+.menu hr {
+  color: #70707021;
+  margin-bottom: 7px;
+}
+.menu section {
+  text-align: center;
+}
+.menu section img {
+  transform: scale(0.5, 0.5);
+}
+.menu section h3 {
+  font-family: parastoo;
+  font-size: 15px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  color: #2e2e2e;
+}
+.menu section a {
+  color: #2e2e2e;
+  margin-left: 15px;
+}
+.menu section a i {
+  font-size: 20px;
+}
+
+/*** end menu ***/
+@media (min-width: 1200px) {
+  .index-first {
+    margin: 100px auto;
+    text-align: center;
+  }
+  .index-first img {
+    margin: auto;
+    height: 200px;
+    width: 200px;
+  }
+  .index-first div {
+    margin-top: 50px;
+  }
+
+  .index-second {
+    margin-top: -200px auto;
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: calc(50% - 112px);
+    left: calc(50% - 406px);
+  }
+  .index-second .btn-lg {
+    position: absolute;
+    bottom: -5px;
+    right: calc(50% - 40px);
+  }
+  .index-second div {
+    display: inline-block;
+    direction: rtl;
+    margin-bottom: 35px;
+  }
+  .index-second div .slc-red {
+    display: inline-block;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #FF0000;
+  }
+  .index-second div .slc-green {
+    display: inline-block;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #00FF21;
+  }
+  .index-second div .slc-yellow {
+    position: relative;
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #FFFF00;
+  }
+  .index-second div .slc-blue {
+    display: inline-block;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #0055FF;
+  }
+  .index-second div .index-btn {
+    position: absolute;
+    top: calc(50% - 17px);
+    right: calc(50% - 50px);
+  }
+  .index-second div .index-btn button {
+    background-color: transparent;
+    border: none;
+    padding: 3px;
+    font-size: 25px;
+    transition: all 0.3s linear;
+  }
+  .index-second div .index-btn button:hover {
+    cursor: pointer;
+    text-shadow: 1px 1px 2px gray, -1px -1px 2px #2e2e2e gray, -1px 1px 2px gray, 1px -1px 2px gray;
+    box-sizing: border-box;
+    border-radius: 7px;
+    transform: scale(1.1, 1.1);
+  }
+  .index-second div .index-btn .active {
+    border: 2px solid #70707021;
+    background-color: #F5F5F5;
+    border-radius: 7px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .index-first {
+    margin: 100px auto;
+    text-align: center;
+  }
+  .index-first img {
+    margin: auto;
+    height: 200px;
+    width: 200px;
+  }
+  .index-first div {
+    margin-top: 50px;
+  }
+
+  .index-second {
+    margin-top: -200px auto;
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: calc(50% - 112px);
+    left: calc(50% - 406px);
+  }
+  .index-second .btn-lg {
+    position: absolute;
+    bottom: -25px;
+    right: calc(50% - 40px);
+  }
+  .index-second div {
+    display: inline-block;
+    direction: rtl;
+    margin-bottom: 35px;
+  }
+  .index-second div .slc-red {
+    display: inline-block;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #FF0000;
+  }
+  .index-second div .slc-green {
+    display: inline-block;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #00FF21;
+  }
+  .index-second div .slc-yellow {
+    position: relative;
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #FFFF00;
+  }
+  .index-second div .slc-blue {
+    display: inline-block;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #0055FF;
+  }
+  .index-second div .index-btn {
+    position: absolute;
+    top: calc(50% - 17px);
+    right: calc(50% - 50px);
+  }
+  .index-second div .index-btn button {
+    background-color: transparent;
+    border: none;
+    padding: 3px;
+    font-size: 25px;
+    transition: all 0.3s linear;
+  }
+  .index-second div .index-btn button:hover {
+    cursor: pointer;
+    text-shadow: 1px 1px 2px gray, -1px -1px 2px #2e2e2e gray, -1px 1px 2px gray, 1px -1px 2px gray;
+    box-sizing: border-box;
+    border-radius: 7px;
+    transform: scale(1.1, 1.1);
+  }
+  .index-second div .index-btn .active {
+    border: 2px solid #70707021;
+    background-color: #F5F5F5;
+    border-radius: 7px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .index-first {
+    margin: 100px auto;
+    text-align: center;
+  }
+  .index-first img {
+    margin: auto;
+    height: 200px;
+    width: 200px;
+  }
+  .index-first div {
+    margin-top: 50px;
+  }
+
+  .index-second {
+    margin-top: -200px auto;
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: calc(50% - 170px);
+    left: calc(50% - 406px);
+  }
+  .index-second .btn-lg {
+    position: absolute;
+    bottom: -25px;
+    right: calc(50% - 40px);
+  }
+  .index-second div {
+    display: inline-block;
+    direction: rtl;
+    margin-bottom: 35px;
+  }
+  .index-second div .slc-red {
+    display: inline-block;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #FF0000;
+  }
+  .index-second div .slc-green {
+    display: inline-block;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #00FF21;
+  }
+  .index-second div .slc-yellow {
+    position: relative;
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #FFFF00;
+  }
+  .index-second div .slc-blue {
+    display: inline-block;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #0055FF;
+  }
+  .index-second div .index-btn {
+    position: absolute;
+    top: calc(50% - 17px);
+    right: calc(50% - 50px);
+  }
+  .index-second div .index-btn button {
+    background-color: transparent;
+    border: none;
+    padding: 3px;
+    font-size: 25px;
+    transition: all 0.3s linear;
+  }
+  .index-second div .index-btn button:hover {
+    cursor: pointer;
+    text-shadow: 1px 1px 2px gray, -1px -1px 2px #2e2e2e gray, -1px 1px 2px gray, 1px -1px 2px gray;
+    box-sizing: border-box;
+    border-radius: 7px;
+    transform: scale(1.1, 1.1);
+  }
+  .index-second div .index-btn .active {
+    border: 2px solid #70707021;
+    background-color: #F5F5F5;
+    border-radius: 7px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .index-first {
+    margin: 100px auto;
+    text-align: center;
+  }
+  .index-first img {
+    margin: auto;
+    height: 200px;
+    width: 200px;
+  }
+  .index-first div {
+    margin-top: 50px;
+  }
+
+  .index-second {
+    margin-top: -200px auto;
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: calc(50% - 170px);
+    width: 100%;
+    padding-bottom: 15px;
+  }
+  .index-second .btn-lg {
+    position: absolute;
+    bottom: -25px;
+    right: calc(50% - 40px);
+    margin-bottom: 35px;
+  }
+  .index-second div {
+    display: inline-block;
+    direction: rtl;
+    margin-bottom: 35px;
+  }
+  .index-second div .slc-red {
+    display: inline-block;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #FF0000;
+  }
+  .index-second div .slc-green {
+    display: inline-block;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #00FF21;
+  }
+  .index-second div .slc-yellow {
+    position: relative;
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #FFFF00;
+  }
+  .index-second div .slc-blue {
+    display: inline-block;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #0055FF;
+  }
+  .index-second div .index-btn {
+    position: absolute;
+    top: calc(50% - 17px);
+    right: calc(50% - 50px);
+  }
+  .index-second div .index-btn button {
+    background-color: transparent;
+    border: none;
+    padding: 3px;
+    font-size: 25px;
+    transition: all 0.3s linear;
+  }
+  .index-second div .index-btn button:hover {
+    cursor: pointer;
+    text-shadow: 1px 1px 2px gray, -1px -1px 2px #2e2e2e gray, -1px 1px 2px gray, 1px -1px 2px gray;
+    box-sizing: border-box;
+    border-radius: 7px;
+    transform: scale(1.1, 1.1);
+  }
+  .index-second div .index-btn .active {
+    border: 2px solid #70707021;
+    background-color: #F5F5F5;
+    border-radius: 7px;
+  }
+}
+@media (max-width: 576px) {
+  .index-first {
+    margin: 100px auto;
+    text-align: center;
+  }
+  .index-first img {
+    margin: auto;
+    height: 200px;
+    width: 200px;
+  }
+  .index-first div {
+    margin-top: 50px;
+  }
+
+  .index-second {
+    margin-top: -200px auto;
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: calc(50% - 250px);
+    width: 100%;
+    padding-bottom: 15px;
+    overflow: scroll;
+  }
+  .index-second .btn-lg {
+    position: absolute;
+    bottom: -25px;
+    right: calc(50% - 40px);
+    margin-bottom: 35px;
+  }
+  .index-second div {
+    display: inline-block;
+    direction: rtl;
+    margin-bottom: 35px;
+  }
+  .index-second div .slc-red {
+    display: inline-block;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #FF0000;
+  }
+  .index-second div .slc-green {
+    display: inline-block;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #00FF21;
+  }
+  .index-second div .slc-yellow {
+    position: relative;
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #FFFF00;
+  }
+  .index-second div .slc-blue {
+    display: inline-block;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #0055FF;
+  }
+  .index-second div .index-btn {
+    position: absolute;
+    top: calc(50% - 17px);
+    right: calc(50% - 50px);
+  }
+  .index-second div .index-btn button {
+    background-color: transparent;
+    border: none;
+    padding: 3px;
+    font-size: 25px;
+    transition: all 0.3s linear;
+  }
+  .index-second div .index-btn button:hover {
+    cursor: pointer;
+    text-shadow: 1px 1px 2px gray, -1px -1px 2px #2e2e2e gray, -1px 1px 2px gray, 1px -1px 2px gray;
+    box-sizing: border-box;
+    border-radius: 7px;
+    transform: scale(1.1, 1.1);
+  }
+  .index-second div .index-btn .active {
+    border: 2px solid #70707021;
+    background-color: #F5F5F5;
+    border-radius: 7px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

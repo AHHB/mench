@@ -1,0 +1,127 @@
+@import"reboot";
+@import"variables";
+@import"index";
+@import"play";
+
+body{
+    background-color: $bg-color;
+}
+
+/*** buttons ***/
+.btn{
+    background-color: $bg2-color;
+    border: 0.01rem solid $border-color;
+    padding: 5px 7px 5px 7px;
+    margin: 2px;
+    border-radius: 5px;
+    font-family: parastoo;
+    box-shadow: 2px 2px 3px $border-color , -2px -2px 3px $border-color;
+    transition: all 0.2s linear;
+    &:hover{
+        cursor: pointer;
+        text-shadow: 1px 1px 2px $border-color;
+        transform: scale(1.05,1);
+        box-shadow: 2px 2px 5px $border-color , -2px -2px 5px $border-color ,-2px 2px 5px $border-color , 2px -2px 5px $border-color;
+    }
+}
+
+.btn-lg{
+    background-color: $bg2-color;
+    border: 0.01rem solid $border-color;
+    padding: 10px 20px 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-family: parastoo;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 2px 2px 3px $border-color , -2px -2px 3px $border-color;
+    transition: all 0.2s linear;
+    &:hover{
+        cursor: pointer;
+        text-shadow: 1px 1px 2px $border-color;
+        transform: scale(1.05,1);
+        box-shadow: 2px 2px 5px $border-color , -2px -2px 5px $border-color ,-2px 2px 5px $border-color , 2px -2px 5px $border-color;
+    }
+}
+/*** end buttons ***/
+
+/*** menu ***/
+.menu-btn{
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    font-size: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.menu{
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    width: 300px;
+    background-color: $bg2-color;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px $border-color , -2px -2px 5px $border-color ,-2px 2px 5px $border-color , 2px -2px 5px $border-color;
+    text-align: right;
+    direction: rtl;
+    padding: 5px 10px;
+    display: none;
+    z-index: 1000;
+    h1{
+        font-family: parastoo;
+        font-size: 30px;
+        display: inline-block;
+    }
+    p{
+        display: inline-block;
+        color: gray;
+        margin-right: 7px;
+    }
+    hr{
+        color: $border-color;
+        margin-bottom: 7px;
+    }
+    section{
+        text-align: center;
+        img{
+            transform: scale(0.5,0.5);
+        }
+        h3{
+            font-family: parastoo;
+            font-size: 15px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            color: $bg3-color;
+        }
+        a{
+            color: $bg3-color;
+            margin-left: 15px;
+            i{
+                font-size: 20px;
+            }
+        }
+    }
+}
+/*** end menu ***/
+
+@media (min-width:1200px){
+    @include index-xxl;
+}
+
+@media (min-width:992px) and (max-width:1200px){
+    @include index-xl;
+}
+
+@media (min-width:768px) and (max-width:992px){
+    @include index-md;
+}
+
+@media (min-width:576px) and (max-width:768px){
+    @include index-sm;
+}
+
+@media (max-width:576px){
+    @include index-xsm;
+}
